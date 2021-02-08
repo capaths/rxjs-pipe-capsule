@@ -8,7 +8,7 @@ export class ObservablesGeneratorService {
 
   constructor() { }
 
-  repeatEvery(ms: number): Observable<number> {
+  countEvery(ms: number): Observable<number> {
     return interval(ms);
   }
 }

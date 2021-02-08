@@ -11,7 +11,7 @@ export class ObservablesComponent implements OnInit {
   counter$: Observable<number>;
 
   constructor(generator: ObservablesGeneratorService) {
-    this.counter$ = generator.repeatEvery(1000);
+    this.counter$ = generator.countEvery(1000);
   }
 
   ngOnInit(): void {

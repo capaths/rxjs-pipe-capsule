@@ -1,1 +1,21 @@
-<p>map works!</p>
+<h1>El operador Map</h1>
+
+<p>El operador Map permite transformar el dato de un retornable antes de ser entregado. Por ejemplo, al contador
+  que suma 1 cada segundo que teníamos antes:</p>
+
+<b>Valor original:</b>
+<h3>{{counter$ | async}}</h3>
+
+<p>Podemos transformarlo de muchas formas:</p>
+
+<b>Sumarle 1:</b>
+<h3>{{counterPlus1$ | async}}</h3>
+
+<b>Multiplicarlo por 2:</b>
+<h3>{{counterBy2$ | async}}</h3>
+
+<b>Usarlo para obtener una cantidad de letras 'a'</b>
+<h3>{{counterLetters$ | async}}</h3>
+
+<b>Formatearlo como tiempo</b>
+<h3>{{counterTime$ | async}}</h3>
