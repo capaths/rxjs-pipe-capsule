@@ -60,7 +60,7 @@ const routes: Routes = [
         displayName: 'Pipes'
       },
       next: {
-        path: 'switch-map/0',
+        path: 'switch-map/1',
         displayName: 'Switch Map'
       }
     }
