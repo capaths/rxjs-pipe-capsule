@@ -14,6 +14,7 @@ export class MapComponent implements OnInit {
   counterBy2$: Observable<number>;
   counterLetters$: Observable<string>;
   counterTime$: Observable<string>;
+  counterCombine$: Observable<string>;
 
 
   constructor(generator: ObservablesGeneratorService) {
@@ -33,6 +34,11 @@ export class MapComponent implements OnInit {
         const seconds = value % 60;
         return `${minutes}:${seconds}`;
       })
+    );
+    this.counterCombine$ = this.counter$.pipe(
+      map(value => value + 1),
+      map(value => value * 2),
+      map(value => 'a'.repeat(value)),
     );
   }
 
