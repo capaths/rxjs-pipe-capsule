@@ -60,13 +60,13 @@ const routes: Routes = [
         displayName: 'Pipes'
       },
       next: {
-        path: 'switch-map',
+        path: 'switch-map/0',
         displayName: 'Switch Map'
       }
     }
   },
   {
-    path: 'switch-map',
+    path: 'switch-map/:num',
     component: SwitchMapComponent,
     data: {
       page: 4,

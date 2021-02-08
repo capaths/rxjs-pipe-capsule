@@ -41,10 +41,7 @@ export class NavigatorComponent {
           };
           return route.firstChild ? route.firstChild.data : of(data);
         }),
-        map((x: Data) => {
-          console.log(x);
-          return x as PreviousNextData;
-        })
+        map((x: Data) => x as PreviousNextData)
       );
   }
 }
