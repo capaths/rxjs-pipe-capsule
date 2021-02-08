@@ -1,17 +1,29 @@
-<div class="row" *ngIf="routeData$ | async as previousNext">
-  <div class="col-4 text-left">
-    <button class="btn btn-primary" *ngIf="previousNext.previous" [routerLink]="previousNext.previous.path">
-      <fa-icon [icon]="previousIcon"></fa-icon>{{previousNext.previous.displayName}}
-    </button>
+<div *ngIf="routeData$ | async as previousNext">
+  <div class="row pb-3">
+    <div class="col-4"></div>
+    <div class="col-4 text-center">
+      <span *ngIf="previousNext.page > 0; else isIndex">{{previousNext.page}} / 6</span>
+      <ng-template #isIndex>Index</ng-template>
+    </div>
+    <ng-template></ng-template>
   </div>
-  <div class="col-4 text-center">
-    <button class="btn btn-outline-primary" routerLink="">
-      <fa-icon [icon]="homeIcon"></fa-icon>
-    </button>
-  </div>
-  <div class="col-4 text-right">
-    <button class="btn btn-primary" *ngIf="previousNext.next" [routerLink]="previousNext.next.path">
-      {{previousNext.next.displayName}}<fa-icon [icon]="nextIcon"></fa-icon>
-    </button>
+  <div class="row">
+    <div class="col-4 text-left">
+      <button class="btn btn-outline-primary" *ngIf="previousNext.previous" [routerLink]="previousNext.previous.path">
+        <fa-icon [icon]="previousIcon"></fa-icon>
+        {{previousNext.previous.displayName}}
+      </button>
+    </div>
+    <div class="col-4 text-center">
+      <button class="btn btn-primary" routerLink="">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+      </button>
+    </div>
+    <div class="col-4 text-right">
+      <button class="btn btn-outline-primary" *ngIf="previousNext.next" [routerLink]="previousNext.next.path">
+        {{previousNext.next.displayName}}
+        <fa-icon [icon]="nextIcon"></fa-icon>
+      </button>
+    </div>
   </div>
 </div>

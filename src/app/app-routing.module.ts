@@ -12,6 +12,7 @@ const routes: Routes = [
     path: '',
     component: IndexComponent,
     data: {
+      page: 0,
       previous: null,
       next: {
         path: 'observable',
@@ -23,6 +24,7 @@ const routes: Routes = [
     path: 'observable',
     component: ObservablesComponent,
     data: {
+      page: 1,
       previous: {
         path: '',
         displayName: 'Index'
@@ -37,6 +39,7 @@ const routes: Routes = [
     path: 'pipe',
     component: PipesComponent,
     data: {
+      page: 2,
       previous: {
         path: 'observable',
         displayName: 'Observables'
@@ -51,6 +54,7 @@ const routes: Routes = [
     path: 'map',
     component: MapComponent,
     data: {
+      page: 3,
       previous: {
         path: 'pipe',
         displayName: 'Pipes'
@@ -65,6 +69,7 @@ const routes: Routes = [
     path: 'switch-map',
     component: SwitchMapComponent,
     data: {
+      page: 4,
       previous: {
         path: 'map',
         displayName: 'Map'

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {ObservablesGeneratorService} from '../../services/observables-generator.service';
 
 @Component({
   selector: 'app-observables',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./observables.component.scss']
 })
 export class ObservablesComponent implements OnInit {
+  counter$: Observable<number>;
 
-  constructor() { }
+  constructor(generator: ObservablesGeneratorService) {
+    this.counter$ = generator.repeatEvery(1000);
+  }
 
   ngOnInit(): void {
   }

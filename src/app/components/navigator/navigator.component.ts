@@ -11,6 +11,7 @@ interface RouteDisplay {
 }
 
 interface PreviousNextData {
+  page: number;
   previous: RouteDisplay | null;
   next: RouteDisplay | null;
 }
@@ -35,7 +36,8 @@ export class NavigatorComponent {
         switchMap(() => {
           const data: PreviousNextData = {
             previous: null,
-            next: null
+            next: null,
+            page: 0
           };
           return route.firstChild ? route.firstChild.data : of(data);
         }),

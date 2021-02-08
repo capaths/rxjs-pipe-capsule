@@ -2,4 +2,20 @@
 
 <h2>¿Qué es un observable?</h2>
 
-<p></p>
+<blockquote>
+  The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes. This pattern is similar (but not identical) to the publish/subscribe design pattern.
+  - <a href="https://angular.io/guide/observables" target="_blank">Angular Documentation</a>
+</blockquote>
+
+<p>
+  Un observable se llama así básciamente porque está <b>observando</b> alguna fuente de datos como puede ser alguna fila en alguna base datos SQL, un documento de una base de datos
+  documental (como Firebase Firestore), o simplemente un número que va aumentando cada 1 segundo... como a continuación!:
+</p>
+
+<h3>
+  {{counter$ | async}}
+</h3>
+
+<p>
+  Pero... ¿Cómo haces cambiar ese valor?
+</p>
