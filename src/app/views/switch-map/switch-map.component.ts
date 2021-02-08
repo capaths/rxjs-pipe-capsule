@@ -13,6 +13,7 @@ export class SwitchMapComponent {
   params$: Observable<object>;
   routeCounter$: Observable<number>;
   referenceCounter$: Observable<number>;
+  routeCounterPlus2$: Observable<number>;
 
   constructor(
     route: ActivatedRoute,
@@ -26,6 +27,13 @@ export class SwitchMapComponent {
       })
     );
 
-    this.referenceCounter$ = generator.countEvery(1000).pipe(map(value => value + 1));
+    this.referenceCounter$ = generator.countEvery(1000).pipe(
+      map(value => value + 1)
+    );
+
+    this.routeCounterPlus2$ = route.params.pipe(
+      map(params => +params.num + 2),
+      switchMap(value => generator.countEvery(value * 1000))
+    );
   }
 }

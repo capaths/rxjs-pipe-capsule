@@ -1,8 +1,8 @@
 <h3>Switch map operator</h3>
 
 <p>El switch map es similar a map, sólo que esta vez no transforma el valor que retorna de un valor a otro, sino
-que tomar el valor de un observable y lo usa para generar otro observable. Esto se utiliza en Angular por ejemplo
-para obtener algún valor de la ruta que luego se requiere para utilizar otro observable:</p>
+  que tomar el valor de un observable y lo usa para generar otro observable. Esto se utiliza en Angular por ejemplo
+  para obtener algún valor de la ruta que luego se requiere para utilizar otro observable:</p>
 
 <b>Parámetros de la URL:</b>
 <h3>{{params$ | async | json}}</h3>
@@ -12,3 +12,7 @@ para obtener algún valor de la ruta que luego se requiere para utilizar otro ob
 
 <b>Contador de referencia (no usa switch map) que cuenta cada segundo:</b>
 <h3>{{referenceCounter$ | async}}</h3>
+
+<b>Contador que suma 1 cada "num" + 2 segundos</b>
+<h3>{{routeCounterPlus2$ | async}}</h3>
+
