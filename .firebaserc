@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "oshop-a0a60": {
+      "hosting": {
+        "pipe-capsule": [
+          "oshop-a0a60"
+        ]
+      }
+    }
+  }
+}

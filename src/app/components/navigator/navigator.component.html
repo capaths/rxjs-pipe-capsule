@@ -1,0 +1,17 @@
+<div class="row" *ngIf="routeData$ | async as previousNext">
+  <div class="col-4 text-left">
+    <button class="btn btn-primary" *ngIf="previousNext.previous" [routerLink]="previousNext.previous.path">
+      <fa-icon [icon]="previousIcon"></fa-icon>{{previousNext.previous.displayName}}
+    </button>
+  </div>
+  <div class="col-4 text-center">
+    <button class="btn btn-outline-primary" routerLink="">
+      <fa-icon [icon]="homeIcon"></fa-icon>
+    </button>
+  </div>
+  <div class="col-4 text-right">
+    <button class="btn btn-primary" *ngIf="previousNext.next" [routerLink]="previousNext.next.path">
+      {{previousNext.next.displayName}}<fa-icon [icon]="nextIcon"></fa-icon>
+    </button>
+  </div>
+</div>
